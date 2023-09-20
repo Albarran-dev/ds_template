@@ -1,8 +1,7 @@
 # {{cookiecutter.project}}
 -----------------------------
 # Introduction
-The objective is to generate a draft of a PWS(Statement of Work) based on a similar PWS
-and a prompt that includes the relevant information to adapt it.
+
 
 # Set-Up
 Be sure to have poetry and the required python version running(pyenv can help with this).
