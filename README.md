@@ -12,7 +12,8 @@ This is a template for developing data science projects.
 * Cookiecutter: [cookiecutter-installation](https://cookiecutter.readthedocs.io/en/stable/installation.html)
 * Poetry: [poetry-installation](https://python-poetry.org/docs/#installation)  
 * Makefile (Run `winget install GnuWin32.Make`)
-* Pyenv(optional)
+* Pyenv(Optional) [pyenv](https://github.com/pyenv/pyenv) [pyenv-win](https://github.com/pyenv-win/pyenv-win)
+* Dvc(Optional) [dvc](https://dvc.org/)  
 # Usage
 To use the template:  
 
