@@ -1,4 +1,8 @@
 docs/site/
+artifacts/*
+.env
+
+
 
 # OSX Junk
 .DS_Store
