@@ -1,0 +1,5 @@
+[core]
+    autostage = true
+    remote = blob_origin
+['remote "blob_origin"']
+    url = azure://dvc/test
