@@ -36,7 +36,7 @@ To use the template:
 
    
 
-# Estructura
+# Structure
 
 ├── .devcontainer       - Container Configuration  
 ├── .dvc                - DVC configuration  
