@@ -1,3 +1,7 @@
+<!-- ![Python Version](https://img.shields.io/badge/python-3.8-blue) -->
+![Maintainer](https://img.shields.io/badge/owner-{{cookiecutter.owner}}-green)
+[![Poetry](https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json)](https://python-poetry.org/)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 # {{cookiecutter.project}}
 -----------------------------
 # Introduction
