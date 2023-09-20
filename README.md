@@ -33,7 +33,8 @@ To use the template:
 
 
 
-
+# Resources
+* Want to know more about poetry?, check out [Poetry: The Game-Changer in Python Dependency Management](https://python.plainenglish.io/poetry-the-game-changer-in-python-dependency-management-49c4861e5801)  
    
 
 # Structure
