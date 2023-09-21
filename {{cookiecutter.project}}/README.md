@@ -4,8 +4,12 @@
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 # {{cookiecutter.project}}
 -----------------------------
+# Checklist
+- [ ] Leer Oferta del proyect
+- [ ] Añadir el remote del devops a git
+- [ ] Revisar scope con {{cookiecutter.owner}} y PM
+- [ ] Revisar Diseño y Arquitectura con {{cookiecutter.owner}} y PM
 # Introduction
-
 
 # Set-Up
 Be sure to have poetry and the required python version running(pyenv can help with this).  
