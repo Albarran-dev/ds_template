@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "temp"
+version = "0.1.0"
+description = ""
+authors = ["Alvaro Albarran <alvaro.albarran@turingchallenge.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^{{cookiecutter.python_version}}"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "N", "B", "ARG", "PL", "ERA", "SIM", "RUF"]
+ignore = ["B905", "E402"]
+
+[tool.flake8]
+select = "C901"
+max-line-length = 100
+
+[tool.isort]
+multi_line_output = 0
+combine_as_imports = true
+lines_after_imports = 2
+remove_redundant_aliases = false
+indent = "    "
