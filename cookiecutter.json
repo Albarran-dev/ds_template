@@ -1,4 +1,6 @@
 {
     "project": "project",
-    "owner": "alvaro_albarran"
+    "owner": "alvaro_albarran",
+    "python_version": "3.9.16",
+    "gpu": ["no", "yes"]
 }

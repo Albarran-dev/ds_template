@@ -1,4 +1,4 @@
 {
     "python.analysis.typeCheckingMode": "basic",
-    "ruff.args": ["--config=ruff.toml"]
+    "ruff.args": ["--config=pyproject.toml"],
 }
