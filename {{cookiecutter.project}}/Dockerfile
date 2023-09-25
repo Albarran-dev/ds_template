@@ -1,24 +1,24 @@
 # Common base with essential tools and libraries
-FROM python:3.8.16-slim AS build
+FROM python:{{cookiecutter.python_version}}-slim AS build
 
 WORKDIR /app
 
 # System dependencies if needed
 # RUN apt-get update \
-#     && apt-get -y install pkg-config libcairo2 libcairo2-dev \
+#     && apt-get -y install gcc python3-dev \
 #     && apt-get clean
 
 # -----
 
 # Stage 1: Development Image
-FROM python:3.8.16-slim AS dev
+FROM python:{{cookiecutter.python_version}}-slim AS dev
 
 RUN groupadd -r myuser && useradd -r -g myuser myuser
 
 # System dependencies if needed
-# RUN apt-get update \
-#     && apt-get -y install libpango1.0-dev libpangocairo-1.0-0 gcc g++ python3-dev\
-#     && apt-get clean
+RUN apt-get update \
+    && apt-get install -y gcc python3-dev \
+    && apt-get clean
 
 ENV PYTHONUNBUFFERED=1 \
     PIP_NO_CACHE_DIR=1
@@ -26,7 +26,8 @@ ENV PYTHONUNBUFFERED=1 \
 # Copy and install dev requirements
 WORKDIR /app
 COPY requirements_dev.txt .
-COPY --from=build /usr/local/lib/python3.8/site-packages /usr/local/lib/python3.8/site-packages
+# If system dependencies where installed
+# COPY --from=build /usr/local/lib/python3.9/site-packages /usr/local/lib/python3.9/site-packages
 
 RUN pip install --upgrade pip wheel
 RUN pip install -r requirements_dev.txt
@@ -38,9 +39,9 @@ COPY ./tests tests
 COPY pyproject.toml pyproject.toml
 
 
-RUN chown -R myuser:myuser /app
-RUN chmod -R 755 /app
-USER myuser
+# RUN chown -R myuser:myuser /app
+# RUN chmod -R 755 /app
+# USER myuser
 
 EXPOSE 8080
 # FastAPI example command
@@ -49,7 +50,7 @@ EXPOSE 8080
 # -----
 
 # Stage 2: Production Image
-FROM python:3.8.16-slim AS prod
+FROM python:{{cookiecutter.python_version}}-slim AS prod
 
 RUN groupadd -r myuser && useradd -r -g myuser myuser
 
@@ -62,7 +63,7 @@ WORKDIR /app
 COPY requirements.txt .
 
 # If system dependencies where installed
-# COPY --from=build /usr/local/lib/python3.8/site-packages /usr/local/lib/python3.8/site-packages
+# COPY --from=build /usr/local/lib/python3.9/site-packages /usr/local/lib/python3.9/site-packages
 
 RUN pip install --upgrade pip wheel
 RUN pip install -r requirements.txt
