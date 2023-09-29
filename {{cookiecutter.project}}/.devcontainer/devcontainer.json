@@ -34,7 +34,7 @@
 
 	// Uncomment when using a ptrace-based debugger like C++, Go, and Rust
 	{%- if cookiecutter.gpu == "no" -%}
-	{%- elif cookiecutter.gpu == "BSD-3" -%}
+	{%- elif cookiecutter.gpu == "yes" -%}
 	"runArgs": [ "--gpus=all" ],
 	{% endif %}
 
